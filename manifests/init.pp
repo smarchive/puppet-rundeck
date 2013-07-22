@@ -19,13 +19,6 @@ class rundeck(
   $start           = true,
 ) {
 
-  if(!is_array($config_source) and !is_string($config_source)) {
-    fail('config_source must be either an array or a string')
-  }
-
-  validate_bool($enable)
-  validate_bool($start)
-
   class{'rundeck::install': } ->
   class{'rundeck::config': } ~>
   class{'rundeck::service': } ->
