@@ -1,7 +1,7 @@
 class rundeck::yumrepo ($enabled=1){
   yumrepo {
     'rundeck':
-      baseurl  => 'http://repo.rundeck.org/repo/rundeck/1/release',
+      baseurl  => 'http://dl.bintray.com/rundeck/rundeck-rpm',
       gpgcheck => 0,
       enabled  => $enabled,
   }
